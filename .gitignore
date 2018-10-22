@@ -1,9 +1,9 @@
-/node_modules/
-/dist/
+/src/node_modules/
+/src/dist/
 /.git/
-/.idea/
-/app/css/
-/**/_backstage
-/**/package-lock.json
-/**/Thumbs.db
-/**/*.DS_Store
+/src/.idea/
+/src/app/css/
+/src/**/_backstage
+/src/**/package-lock.json
+/src/**/Thumbs.db
+/src/**/*.DS_Store
