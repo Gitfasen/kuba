@@ -1,0 +1,49 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 22/10/2018 20:32
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/Flaticon/Flaticon.eot");
+  src: url("../fonts/Flaticon/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/Flaticon/Flaticon.woff") format("woff"),
+       url("../fonts/Flaticon/Flaticon.ttf") format("truetype"),
+       url("../fonts/Flaticon/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/Flaticon/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-share:before { content: "\f100"; }
+.flaticon-music:before { content: "\f101"; }
+.flaticon-twitter:before { content: "\f102"; }
+.flaticon-facebook-logo:before { content: "\f103"; }
+.flaticon-instagram:before { content: "\f104"; }
+    
+    $font-Flaticon-share: "\f100";
+    $font-Flaticon-music: "\f101";
+    $font-Flaticon-twitter: "\f102";
+    $font-Flaticon-facebook-logo: "\f103";
+    $font-Flaticon-instagram: "\f104";
