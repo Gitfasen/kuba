@@ -1,0 +1,57 @@
+.contact
+  position: absolute
+  width: 100%
+  top: 30%
+  .contact-info
+    .h2
+      font-family: 'TraktirNormal', sans-serif
+      font-size: 120px
+      line-height: 1
+      margin-top: -20px
+      margin-bottom: 50px
+    p>strong
+      color: $accent
+  .contact-form
+    .form-item
+      position: relative
+      &::before
+        content: ''
+        background-color: #fff
+        width: 40px
+        height: 2px
+        position: absolute
+        z-index: 1
+        bottom: 0
+        left: 0
+    .form-page-contact
+      &__item
+        display: block
+        margin-bottom: 15px
+        min-width: 585px
+        width: 100%
+        background-color: rgba(255, 255, 255, 0.1)
+        padding: 20px
+        border-bottom-width: 2px
+        border-color: transparent
+        position: relative
+        color: #ffffff
+        &::placeholder
+          color: #ffffff
+        &:focus
+          border-bottom-color: $accent
+          z-index: 2
+      &__bt
+        border: none
+        background-color: $accent
+        color: #ffffff
+        font-family: 'TraktirNormal', sans-serif
+        padding: 25px 90px
+        margin-top: 30px
+        letter-spacing: 5px
+        font-size: 20px
+        text-transform: uppercase
+        cursor: pointer
+        transition: all 0.5s ease
+        &:hover
+          transform: scale(1.05)
+

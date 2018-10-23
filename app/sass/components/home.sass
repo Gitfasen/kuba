@@ -1,0 +1,30 @@
+.home-layer-info
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+  position: absolute
+  z-index: 10
+  bottom: 10%
+  padding: 3%
+  font-family: 'SignPainter', sans-serif
+  font-style: italic
+
+.video-bg_layer
+  background: no-repeat center fixed
+  background-size: cover
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+
+
++media-breakpoint-down(xs)
+  .video-bg_layer
+    background-size: 170%
+    background-position: center bottom
+  .home-layer-info
+    bottom: 60vh
+  .home-layer-info-right
+    margin-bottom: -30px
