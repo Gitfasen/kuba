@@ -15,7 +15,7 @@
   height: 100vh
   top: 0
   left: 0
-  z-index: -1
+  z-index: 5
   background-color: rgba(227, 160, 87, 0.7686274509803922)
   text-transform: uppercase
   letter-spacing: 5px
@@ -32,10 +32,12 @@
   display: flex
   justify-content: space-between
   align-items: center
-  margin: 60px 3%
+  margin: 40px 3%
   text-transform: uppercase
+  height: 100px
   .logo
-    font-size: 40px
+    font-size: 35px
+    text-align: center
     a
       opacity: 1
   a
@@ -53,7 +55,7 @@
     list-style: none
     li
       display: inline-block
-      margin: 0 60px
+      margin: 0 40px
       font-size: 18px
       letter-spacing: 5px
       position: relative
@@ -67,12 +69,15 @@
         bottom: -20px
 .mobile-mnu
   display: none
+  position: absolute
   ul
     margin: 0
     padding: 0
     list-style: none
     text-align: center
 .bt-mnu
+  position: relative
+  z-index: 10
   .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::after, .hamburger.is-active .hamburger-inner::before
     background-color: $text
   .hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
@@ -83,20 +88,40 @@
     transform: translate(10px, 0)
   .hamburger-box
     height: 8px
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+  .top-nav
+    .top-nav-left li,
+    .top-nav-right li
+      margin: 0 10px
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
 +media-breakpoint-down(xs)
   .top-nav
     margin: 30px 3%
-  .logo
-    padding-right: 10px
-    a
+    height: 50px
+    .logo
+      padding-right: 10px
       font-size: 30px
-      line-height: 66px
+      a
+        line-height: 66px
   .top-nav-left,
   .top-nav-right
     display: none
   .share
     position: absolute
     right: 10%
-+media-breakpoint-up(xl)
+
+
+
+// ≥576px
++media-breakpoint-down(xs)
++media-breakpoint-up(md)
   .bt-mnu
     display: none

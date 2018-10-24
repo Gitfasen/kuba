@@ -1,0 +1,81 @@
+#rider
+  position: absolute
+  top: 25vh
+  width: 100%
+  min-height: 400px
+  display: flex
+  align-items: center
+  .container
+    position: relative
+  .rider-bt
+    text-transform: uppercase
+    font-family: 'TraktirNormal', sans-serif
+    letter-spacing: 5px
+  .h2
+    font-size: 120px
+  .h4
+    font-size: 30px
+  p
+    font-size: 15px
+  .rider-bt
+    background-color: $accent
+    color: #ffffff
+    display: inline-block
+    padding: 20px 15px
+    width: 100%
+    position: relative
+    text-align: center
+    font-size: 20px
+    transition: all 0.5s ease
+    &::before
+      position: absolute
+      right: 25px
+      top: 27px
+      border-left: 1px solid #FFFFFF
+      padding-left: 20px
+    &:hover
+      text-decoration: none
+      transform: scale(1.05)
+.rider-download
+  position: absolute
+  right: 40px
+  top: 40px
+  .fi
+    margin-right: 15px
+  a
+    color: #ffffff
+    &:hover
+      text-decoration: none
+
+.rider-page
+  .container
+    position: relative
+    padding: 0 250px
+  .h1
+    font-size: 120px
+  .h3
+    font-size: 30px
+.rider-page-arrow
+  height: 1px
+  width: 140px
+  border-top: 2px solid $accent
+  position: absolute
+  left: 0
+  top: 10px
+  cursor: pointer
+  z-index: 10
+  padding: 10px 0
+  transition: all 0.5s ease
+  &:hover
+    transform: scale(1.05)
+  &::before
+    content: ''
+    width: 10px
+    height: 10px
+    border-left: 2px solid $accent
+    border-bottom: 2px solid $accent
+    position: absolute
+    transform: rotate(45deg)
+    top: -5.55px
+    left: 1px
+    z-index: 1
