@@ -1,0 +1,137 @@
+.album-page
+  padding-top: 70px
+  &-img
+    margin-bottom: 30px
+  &-info
+    &-title
+      text-transform: uppercase
+      font-family: 'TraktirNormal', sans-serif
+      font-size: 30px
+    &-data
+      font-size: 15px
+      margin-bottom: 40px
+    &-playlist
+      margin-top: 30px
+      &-item
+        position: relative
+        .audio-item-title
+          position: absolute
+          z-index: 20
+          display: flex
+          align-items: center
+          height: 60px
+          font-size: 20px
+          left: 60px
+          text-transform: uppercase
+          font-family: 'TraktirNormal', sans-serif
+        .mejs__container,
+        .mejs__controls
+          background-color: transparent
+          height: 60px!important
+        .mejs__container.mejs__audio
+          width: 100%!important
+          min-width: 100%!important
+        .mejs__controls
+          display: flex
+          align-items: center
+          margin: 0
+          padding: 0
+        .mejs__time.mejs__currenttime-container,
+        .mejs__button.mejs__volume-button.mejs__mute,
+        .mejs__horizontal-volume-slider,
+        .mejs__time-hovered
+          display: none !important
+        .mejs__button.mejs__playpause-button
+          position: absolute
+          left: 20px
+          z-index: 20
+        .mejs__time.mejs__duration-container
+          position: absolute
+          right: 10px
+          z-index: -1
+        .mejs__time-total.mejs__time-slider,
+        .mejs__controls:not([style*="display: none"])
+          border-bottom: 1px solid rgba(255, 255, 255, 0.15)
+          background: none
+          position: absolute
+          height: 60px
+          top: 0
+          left: 0
+          margin: 0
+          padding: 0
+          border-radius: 0
+        .mejs__time-total.mejs__time-slider:focus
+          outline: none
+        .mejs__time-rail
+          position: absolute
+          width: 100%
+          margin: 0
+          padding: 0
+          height: 60px
+        .mejs__time-current
+          height: 60px
+          background-color: #E3A057
+        .mejs__time-loaded
+          height: 60px
+          background-color: rgba(227, 160, 87, 0.18)
+          border-radius: 0
+        .mejs__duration
+          font-family: $default-font
+          font-size: 15px
+          font-weight: 300
+        .mejs__time-handle-content
+          border: none
+          border-radius: 0
+          height: 60px
+        .mejs__time-buffering
+          border-radius: 0
+          height: 60px
+  .video-page-item
+    margin: 0
+    position: static
+    height: auto
+  .owl-carousel.owl-theme
+    margin: 50px 0
+  .owl-nav
+    position: relative
+    text-align: right
+  .owl-prev.disabled
+    display: none
+  .owl-prev,
+  .owl-next
+    display: block
+    width: 150px
+    height: 2px
+    background: #e3a057!important
+    position: relative
+    padding: 10px 0
+    line-height: 10px
+  .owl-prev:focus,
+  .owl-next:focus
+    outline: none
+  .owl-next:before
+    content: ''
+    width: 10px
+    height: 10px
+    border-right: 2px solid #e3a057
+    border-top: 2px solid #e3a057
+    position: absolute
+    -webkit-transform: rotate(45deg)
+    -ms-transform: rotate(45deg)
+    transform: rotate(45deg)
+    top: -4px
+    right: 1px
+    z-index: 1
+  .owl-prev:before
+    content: ''
+    width: 10px
+    height: 10px
+    border-left: 2px solid #e3a057
+    border-bottom: 2px solid #e3a057
+    position: absolute
+    -webkit-transform: rotate(45deg)
+    -ms-transform: rotate(45deg)
+    transform: rotate(45deg)
+    top: -4px
+    left: 1px
+    z-index: 1

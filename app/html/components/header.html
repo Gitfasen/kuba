@@ -19,7 +19,9 @@
 </head>
 
 <body>
-
+<div class="loader">
+    <div class="loader_inner"></div>
+</div>
 
 <header class="header">
     <nav class="top-nav">
@@ -30,7 +32,7 @@
                 </div>
             </div>
         </div>
-        <div class="share"><a href="#"><i class="fi flaticon-share"></i></a></div>
+        <div class="share"><a href="#"><i class="fas fa-share-alt"></i></a></div>
         <ul class="top-nav-left">
             <li><a href="album.html">Альбомы</a></li>
             <li><a href="photo.html">Фото</a></li>
@@ -42,7 +44,7 @@
             <li><a href="rider.html">Райдер</a></li>
             <li><a href="contact.html">Контакты</a></li>
         </ul>
-        <div class="music"><a href="#"><i class="fi flaticon-music"></i></a></div>
+        <div class="music"><a href="#"><i class="fas fa-music"></i></a></div>
 
     </nav>
     <nav class="mobile-mnu">
@@ -56,6 +58,7 @@
         </ul>
     </nav>
 </header>
-<div class="video-bg"
-     data-vide-bg="mp4: video/1.mp4, poster:img/back.jpg" data-vide-options="position: 0% 0%">
-</div>
+<video class="video-bg" poster="img/back.jpg" id="bgvid" playsinline autoplay muted loop>
+    <source src="video/1.mp4" type="video/mp4">
+</video>
+

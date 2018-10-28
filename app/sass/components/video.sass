@@ -1,18 +1,35 @@
 .video-page
   padding-top: 10vh
-  width: 3000px
-  height: 80vh
+  width: 3500px
+  max-height: 80vh
   position: fixed
+  overflow-x: hidden
   &-item
     margin-bottom: 20px
-    max-width: 570px
-    height: 400px
+    max-width: 500px
+    height: 350px
     width: 100%
     top: 50%
-    margin-top: -200px
-    left: 135px
+    margin-top: -35vh
+    position: absolute
+    &:nth-child(1)
+      left: 200px
     &:nth-child(2)
-      left: 715px
+      left: 720px
+    &:nth-child(3)
+      left: 1240px
+    &:nth-child(4)
+      left: 1760px
+    &:nth-child(5)
+      left: 2280px
+    &-info
+      .v-title
+        font-family: "TraktirNormal", sans-serif
+        text-transform: uppercase
+        font-size: 30px
+        color: #ffffff
+      .v-desc
+        font-size: 15px
 .preview
   max-width: 570px
   height: 400px
@@ -37,4 +54,19 @@
     transition: all 0.5s ease
     &:hover
       transform: scale(1.05)
+
+
++media-breakpoint-down(xs)
+  .modal-video-close-btn.js-modal-video-dismiss-btn
+    right: 50%
+    margin-right: -17.5px
+  .content
+    top: 100px
+    overflow-y: scroll
+    padding: 0
+  .video-page-item
+    position: static
+    max-width: 90vw
+    margin: 0 5vw 15vw
+    height: auto
 

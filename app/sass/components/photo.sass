@@ -1,0 +1,33 @@
+.photo-page
+  .video-page
+    &-item
+      &:nth-child(1)
+        left: 200px
+      &:nth-child(2)
+        left: 550px
+      &:nth-child(3)
+        left: 890px
+      &:nth-child(4)
+        left: 1230px
+      &:nth-child(5)
+        left: 1570px
+
+.photo-container-item
+  max-width: 320px
+  margin-bottom: 20px
+  transition: all 0.25s ease
+  &:hover
+    transform: scale(1.09)
+  a
+    cursor: url("../img/cursor-hover.png"), pointer
+
++media-breakpoint-down(xs)
+  .photo-container-item
+    max-width: 90vw
+    margin: 0 5vw 15vw
+  .photo-page
+    .video-page-item
+      margin: 0
+      position: static
+      max-width: 380px
+      height: auto

@@ -17,6 +17,14 @@ body
 	font-family: $default-font
 	overflow: hidden
 	color: $text
+	&::-webkit-scrollbar-track
+		opacity: 0
+	&::-webkit-scrollbar
+		width: 0
+		background-color: rgba(6,6,6,0)
+	&::-webkit-scrollbar-thumb
+		border-radius: 10px
+		background-color: rgba(6,6,6,0)
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -34,30 +42,64 @@ body
 
 .text-center
 	text-align: center
-
+a
+	text-decoration: none
+	color: #ffffff
+	&:hover
+		text-decoration: none
 b, strong
 	font-weight: bold
+
+.loader
+	background: none repeat scroll 0 0 #FFFFFF
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+
+.loader_inner
+	background: url(../img/preloader.gif) no-repeat center #FFFFFF
+	background-size: cover
+	height: 256px
+	width: 256px
+	left: 50%
+	top: 50%
+	margin-top: -128px
+	margin-left: -128px
+	position: absolute
 
 .copyright
 	position: fixed
 	bottom: 3%
 	left: 3%
+	opacity: 0.6
+	padding-left: 10px
 .video-bg
-	width: 100%
-	height: 100%
-	z-index: -1
-	top: 0
-	left: 0
 	position: fixed
+	top: 50%
+	left: 50%
+	min-width: 100%
+	min-height: 100%
+	width: auto
+	height: auto
+	z-index: -100
+	transform: translateX(-50%) translateY(-50%)
+	background: url('../img/back.jpg') no-repeat
+	background-size: cover
+	transition: 1s opacity
 .content
 	position: absolute
-	top: 150px
+	top: 125px
 	width: 100%
 	height: 100vh
-	overflow: scroll
 	padding-right: 22px
 	right: -22px
 	padding-bottom: 150px
+	overflow-y: scroll
 .scroll
 	position: fixed
 	bottom: 0

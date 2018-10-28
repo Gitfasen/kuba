@@ -27,21 +27,43 @@
     text-align: center
     font-size: 20px
     transition: all 0.5s ease
-    &::before
+    &:before
+      content: ''
+      background-color: #ffffff
+      height: 20px
+      width: 1px
       position: absolute
-      right: 25px
-      top: 27px
-      border-left: 1px solid #FFFFFF
-      padding-left: 20px
+      right: 60px
+      top: 25px
     &:hover
       text-decoration: none
       transform: scale(1.05)
+    .arrow-bt
+      width: 6px
+      height: 10px
+      background: #ffffff
+      position: absolute
+      right: 30px
+      top: 50%
+      margin-top: -9px
+      &:before,
+      &:after
+        content: ""
+        display: block
+        position: absolute
+        width: 0
+        height: 0
+        border: 10px solid transparent
+        border-bottom: 0
+      &:after
+        bottom: 0px
+        right: -10.95px
+        border-left-color: #ffffff
+        transform: rotate(-45deg)
 .rider-download
   position: absolute
   right: 40px
   top: 40px
-  .fi
-    margin-right: 15px
   a
     color: #ffffff
     &:hover
@@ -60,8 +82,8 @@
   width: 140px
   border-top: 2px solid $accent
   position: absolute
-  left: 0
-  top: 10px
+  left: 80px
+  top: 30px
   cursor: pointer
   z-index: 10
   padding: 10px 0
@@ -79,3 +101,54 @@
     top: -5.55px
     left: 1px
     z-index: 1
+.arrow
+  width: 6px
+  height: 10px
+  background: #ffffff
+  position: absolute
+  left: -20px
+  top: 4px
+  &:before,
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    width: 0
+    height: 0
+    border: 10px solid transparent
+    border-bottom: 0
+  &:after
+    bottom: 0px
+    right: -10.95px
+    border-left-color: #ffffff
+    transform: rotate(-45deg)
+.rider-item
+  margin-bottom: 40px
++media-breakpoint-down(xs)
+  .rider-page
+    .container
+      padding: 0 20px
+      .rider-content
+        .rider-download
+          left: 40px
+        .h1
+          font-size: 65px
+          margin-bottom: 50px
+  .rider-download
+    top: 110px
+    left: 35px
+  .rider-page-arrow
+    display: none
+  #rider
+    overflow-y: scroll
+    height: 100vh
+    padding-bottom: 300px
+    padding-top: 440px
+    top: 25vh
+    .h2
+      font-size: 70px
+      margin-bottom: 40px
+
+  .copyright
+    position: static
+    margin-top: 30px
