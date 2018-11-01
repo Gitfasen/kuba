@@ -1,5 +1,16 @@
 
 
 <script src="js/scripts.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelement-and-player.min.js"></script>
+<script>
+    $('audio').mediaelementplayer({
+        // Do not forget to put a final slash (/)
+        pluginPath: 'https://cdnjs.com/libraries/mediaelement/',
+        // this will allow the CDN to use Flash without restrictions
+        // (by default, this is set as `sameDomain`)
+        shimScriptAccess: 'always'
+        // more configuration
+    });
+</script>
 </body>
 </html>
