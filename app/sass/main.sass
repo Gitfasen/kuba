@@ -15,7 +15,7 @@ body
 	position: relative
 	line-height: 1.65
 	font-family: $default-font
-	overflow: hidden
+	overflow-x: hidden
 	color: $text
 	&::-webkit-scrollbar-track
 		opacity: 0
@@ -76,8 +76,11 @@ b, strong
 	position: fixed
 	bottom: 3%
 	left: 3%
-	opacity: 0.6
-	padding-left: 10px
+	opacity: 0.3
+	padding-left: 15px
+.copyright.active
+	z-index: 10
+	opacity: 1
 .video-bg
 	position: fixed
 	top: 50%
@@ -87,24 +90,20 @@ b, strong
 	width: auto
 	height: auto
 	z-index: -100
-	transform: translateX(-50%) translateY(-50%)
+	transform: translateX(-50%) translateY(-50%)!important
 	background: url('../img/back.jpg') no-repeat
 	background-size: cover
 	transition: 1s opacity
 .content
-	position: absolute
-	top: 125px
+	padding: 100px 10px
 	width: 100%
-	height: 100vh
-	padding-right: 22px
-	right: -22px
-	padding-bottom: 150px
-	overflow-y: scroll
-.scroll
-	position: fixed
-	bottom: 0
-	left: 0
-
+	min-height: 100vh
+	display: flex
+	align-items: center
+	overflow: hidden
+.owl-carousel
+	.owl-stage-outer
+		overflow: visible
 
 
 h1, h2, h3, h4, h5, h6

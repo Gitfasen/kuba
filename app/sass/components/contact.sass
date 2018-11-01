@@ -1,8 +1,12 @@
 .contact
-  position: absolute
-  width: 100%
-  top: 25vh
+  min-height: 100vh
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 150px 0 80px
+
   .contact-info
+    margin-bottom: 20px
     .h2
       font-size: 120px
       line-height: 1
@@ -63,11 +67,6 @@
 
 +media-breakpoint-down(xs)
   .contact
-    overflow-y: scroll
-    height: 100vh
-    padding-bottom: 200px
-    padding-top: 20px
-    top: 15vh
     .contact-info
       .h2
         font-size: 70px

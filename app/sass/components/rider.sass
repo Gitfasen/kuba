@@ -1,8 +1,7 @@
 #rider
-  position: absolute
-  top: 25vh
+  padding: 100px 10px 80px
   width: 100%
-  min-height: 400px
+  min-height: 100vh
   display: flex
   align-items: center
   .container
@@ -11,6 +10,7 @@
     text-transform: uppercase
     font-family: 'TraktirNormal', sans-serif
     letter-spacing: 5px
+    max-width: 350px
   .h2
     font-size: 120px
   .h4
@@ -72,7 +72,7 @@
 .rider-page
   .container
     position: relative
-    padding: 0 250px
+    padding: 0 15%
   .h1
     font-size: 120px
   .h3
@@ -83,7 +83,7 @@
   border-top: 2px solid $accent
   position: absolute
   left: 80px
-  top: 30px
+  top: 0
   cursor: pointer
   z-index: 10
   padding: 10px 0
@@ -124,6 +124,16 @@
     transform: rotate(-45deg)
 .rider-item
   margin-bottom: 40px
+
++media-breakpoint-down(md)
+  .rider-page-arrow
+    display: none
+  .rider-page
+    .container
+      .rider-content
+        .h1
+          font-size: 60px
+          margin-bottom: 50px
 +media-breakpoint-down(xs)
   .rider-page
     .container
@@ -131,20 +141,11 @@
       .rider-content
         .rider-download
           left: 40px
-        .h1
-          font-size: 65px
-          margin-bottom: 50px
   .rider-download
     top: 110px
     left: 35px
-  .rider-page-arrow
-    display: none
+
   #rider
-    overflow-y: scroll
-    height: 100vh
-    padding-bottom: 300px
-    padding-top: 440px
-    top: 25vh
     .h2
       font-size: 70px
       margin-bottom: 40px
@@ -152,3 +153,4 @@
   .copyright
     position: static
     margin-top: 30px
+    padding-left: 0

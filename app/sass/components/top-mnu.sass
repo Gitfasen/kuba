@@ -1,6 +1,6 @@
 .header
   position: fixed
-  width: 100%
+  width: 100vw
   font-family: 'TraktirNormal', sans-serif
   color: $text
   z-index: 2
@@ -22,17 +22,21 @@
   ul
     margin: 0
     padding: 0
+    width: 100%
     li
-      padding: 10px
+      padding: 5px 0
+      display: block
+      width: 100%
       a
         color: #ffffff
-        font-size: 35px
+        font-size: 30px
+        display: block
 
 .top-nav
   display: flex
   justify-content: space-between
   align-items: center
-  margin: 40px 3%
+  margin: 0 3%
   text-transform: uppercase
   height: 100px
   .logo
@@ -59,7 +63,6 @@
       font-size: 18px
       letter-spacing: 5px
       position: relative
-
       a:hover::before
         content: ''
         position: absolute
@@ -67,6 +70,9 @@
         background-color: $accent
         width: 100%
         bottom: -20px
+.share,
+.music
+  z-index: 10
 .mobile-mnu
   display: none
   position: absolute
@@ -78,12 +84,19 @@
 .bt-mnu
   position: relative
   z-index: 10
+  .hamburger
+    padding: 0
   .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::after, .hamburger.is-active .hamburger-inner::before
     background-color: $text
   .hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
     background-color: $text
     height: 2px
+    width: 32px
     transform: translate(-10px, 0)
+  .hamburger-inner::before
+    top: -8px
+  .hamburger-inner::after
+    bottom: -8px
   .hamburger-inner
     transform: translate(10px, 0)
   .hamburger-box
@@ -92,36 +105,48 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+
 // ≥992px
 +media-breakpoint-down(md)
-  .top-nav
-    .top-nav-left li,
-    .top-nav-right li
-      margin: 0 10px
-// ≥768px
-+media-breakpoint-down(sm)
-
-// ≥576px
-+media-breakpoint-down(xs)
-  .top-nav
-    margin: 30px 3%
-    height: 50px
-    .logo
-      padding-right: 10px
-      font-size: 30px
-      a
-        line-height: 66px
-  .top-nav-left,
-  .top-nav-right
-    display: none
   .share
     position: absolute
     right: 10%
-
-
-
-// ≥576px
-+media-breakpoint-down(xs)
-+media-breakpoint-up(md)
-  .bt-mnu
+  .top-nav-left,
+  .top-nav-right
     display: none
+  .top-nav
+    margin: 25px
+    height: 50px
+    .top-nav-left li,
+    .top-nav-right li
+      margin: 0 10px
+    .logo
+      padding-right: 20px
+      font-size: 30px
+      a
+        line-height: 66px
+
+@media only screen and (max-width : 1024px)
+  .share
+    position: absolute
+    right: 50px
+  .top-nav-left,
+  .top-nav-right
+    display: none
+  .top-nav
+    margin: 25px
+    height: 50px
+    .top-nav-left li,
+    .top-nav-right li
+      margin: 0 10px
+    .logo
+      font-size: 30px
+      a
+        line-height: 66px
+
++media-breakpoint-up(md)
+  .mobile-mnu.active
+    ul
+      li
+        a
+          font-size: 50px

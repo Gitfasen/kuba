@@ -4,7 +4,6 @@
   display: flex
   align-items: flex-end
   padding-bottom: 30px
-
 .home-layer-info
   width: 100%
   display: flex
@@ -18,33 +17,147 @@
   font-style: italic
 
 .video-bg_layer
-  background: no-repeat center
-  background-size: 85vw
+  background: no-repeat bottom
+  background-position-x: 11vw
+  background-size: 75vw
   position: absolute
   bottom: 0
   left: 0
   width: 100%
-  height: 80vh
+  height: 100vh
 .home-layer-info-right
   img
     width: 150px
 
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape)
+  body
+    .home-layer-info
+      top: 50%
+    .video-bg_layer
+      background-size: 90%
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape)
+  body
+    .mobile-mnu.active ul li
+      padding: 0
+    .home-layer-info
+      top: 50%
+    .video-bg_layer
+      background-size: 90%
+    .home
+      .home-layer-info
+        top: 55%
+        .home-layer-info-left
+          width: 240px
+          img
+            width: 100%
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : landscape)
+  body
+    .home-layer-info
+      top: 50%
+    .video-bg_layer
+      background-size: 90%
+    .home
+      .home-layer-info
+        top: 55%
+        .home-layer-info-left
+          width: 240px
+          img
+            width: 100%
+@media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (orientation : landscape)
+  body
+    .home-layer-info
+      top: 50%
+    .video-bg_layer
+      background-size: 90%
+    .home
+      .home-layer-info
+        top: 55%
+        .home-layer-info-left
+          width: 240px
+          img
+            width: 100%
+@media only screen and (min-device-width : 411px) and (max-device-width : 823px) and (orientation : landscape)
+  body
+    .mobile-mnu.active ul li
+      padding: 0
+      a
+        font-size: 30px
+    .home-layer-info
+      top: 50%
+    .video-bg_layer
+      background-size: 90%
+    .home
+      .home-layer-info
+        top: 55%
+        .home-layer-info-left
+          width: 240px
+          img
+            width: 100%
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5)
+  body
+    .mobile-mnu.active ul li
+      padding: 20px 0
+      a
+        font-size: 60px
+  .video-bg_layer
+    background-size: 100%
+  .home
+    .home-layer-info
+      top: 20%
+      .home-layer-info-left
+        width: 500px
+        img
+          width: 100%
+
+/* Landscape */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5)
+
+  .video-bg_layer
+    background-size: 100vw
+    background-position-x: 0
+
+@media only screen and (max-width : 1024px)
+  .home-layer-info
+    top: 60%
+    bottom: auto
+  .video-bg_layer
+    background-size: 100vw
+    background-position-x: 0
+  .home-layer-info-left
+    width: 500px
+
+@media only screen and (max-width : 569px)
+  .video-bg_layer
+    background-size: 80%
+// ≥576px
 +media-breakpoint-down(xs)
+  .home-layer-info-left
+    width: 200px
+  .home-layer-info-right
+    width: 100px
+  .copyright
+    font-size: 14px
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥992px
++media-breakpoint-down(md)
+  .home
+    padding-bottom: 10px
   .video-bg_layer
     background-size: 170%
     background-position: center bottom
   .home-layer-info
     height: 150px
-    top: 80px
+    top: 20%
     font-size: 14px
   .home-layer-info-right
     margin-bottom: -30px
+  .video-bg_layer
+    background-size: 140%
 
-+media-breakpoint-up(xl)
-  .home-layer-info
-    height: 150px
-    top: 77vh
-    font-size: 16px
-  .home-layer-info-right
-    margin-bottom: -30px
-
++media-breakpoint-up(md)
+  .home-layer-info-left
+    width: 100%

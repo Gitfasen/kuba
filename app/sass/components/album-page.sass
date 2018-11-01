@@ -1,5 +1,12 @@
 .album-page
-  padding-top: 70px
+  padding-top: 150px
+  .container
+    position: relative
+  .copyright
+    position: static
+  .rider-page-arrow
+    left: 15px
+    top: -40px
   &-img
     margin-bottom: 30px
   &-info
@@ -92,46 +99,48 @@
     height: auto
   .owl-carousel.owl-theme
     margin: 50px 0
-  .owl-nav
-    position: relative
-    text-align: right
-  .owl-prev.disabled
-    display: none
-  .owl-prev,
-  .owl-next
-    display: block
-    width: 150px
-    height: 2px
-    background: #e3a057!important
-    position: relative
-    padding: 10px 0
-    line-height: 10px
-  .owl-prev:focus,
-  .owl-next:focus
-    outline: none
-  .owl-next:before
-    content: ''
-    width: 10px
-    height: 10px
-    border-right: 2px solid #e3a057
-    border-top: 2px solid #e3a057
-    position: absolute
-    -webkit-transform: rotate(45deg)
-    -ms-transform: rotate(45deg)
-    transform: rotate(45deg)
-    top: -4px
-    right: 1px
-    z-index: 1
-  .owl-prev:before
-    content: ''
-    width: 10px
-    height: 10px
-    border-left: 2px solid #e3a057
-    border-bottom: 2px solid #e3a057
-    position: absolute
-    -webkit-transform: rotate(45deg)
-    -ms-transform: rotate(45deg)
-    transform: rotate(45deg)
-    top: -4px
-    left: 1px
-    z-index: 1
+.owl-nav
+  position: absolute
+  text-align: right
+  right: 0
+  bottom: -10vh
+.owl-prev.disabled
+  display: none
+.owl-prev,
+.owl-next
+  display: block
+  width: 150px
+  height: 2px
+  background: #e3a057!important
+  position: relative
+  padding: 10px 0
+  line-height: 10px
+.owl-prev:focus,
+.owl-next:focus
+  outline: none
+.owl-next:before
+  content: ''
+  width: 10px
+  height: 10px
+  border-right: 2px solid #e3a057
+  border-top: 2px solid #e3a057
+  position: absolute
+  -webkit-transform: rotate(45deg)
+  -ms-transform: rotate(45deg)
+  transform: rotate(45deg)
+  top: -4px
+  right: 1px
+  z-index: 1
+.owl-prev:before
+  content: ''
+  width: 10px
+  height: 10px
+  border-left: 2px solid #e3a057
+  border-bottom: 2px solid #e3a057
+  position: absolute
+  -webkit-transform: rotate(45deg)
+  -ms-transform: rotate(45deg)
+  transform: rotate(45deg)
+  top: -4px
+  left: 1px
+  z-index: 1

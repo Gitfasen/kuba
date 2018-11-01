@@ -6,9 +6,9 @@
     $('.hamburger').on('click', function () {
         $('.hamburger').toggleClass('is-active');
         $('.mobile-mnu').toggleClass('active');
+        $('.copyright').toggleClass('active');
         $('.logo').toggleClass('hide');
-        $('.video-bg_layer').toggleClass('hide');
-        $('.home-layer-info').toggleClass('hide');
+        $('.no-hide').toggleClass('hide');
     });
 
     // Video Popup
@@ -19,20 +19,45 @@
 
     $(function() {
         var width = $(window).width();
-        if (width > 768){
-            if ($('.video-page').is('.scroll')) {
-                $('body').css('overflow-y', 'scroll');
-                $.jInvertScroll(['.scroll'], {
-                    width: 'auto',	// Page width (auto or int value)
-                    height: 3500,	// Page height (the shorter, the faster the scroll)
-                    onScroll: function(percent) {
-                        // Callback function that will be called each time the user
-                        // scrolls up or down, useful for animating other parts
-                        // on the page depending on how far the user has scrolled down
-                        // values go from 0.0 to 1.0 (with 4 decimals precision)
+        var height = $(window).height();
+        if (width >= 768 & height >= 636){
+            $('.owl-carousel').owlCarousel({
+                loop:false,
+                margin:20,
+                nav: true,
+                dots: false,
+                navText: ["",""],
+                responsive : {
+                    0 : {
+                        items:2
+                    },
+                    569 : {
+                        items: 2
+                    },
+                    768 : {
+                        items:2
+                    },
+                    1024 : {
+                        items:2
+                    },
+                    1350 : {
+                        items:3
+                    },
+                    1900 : {
+                        items:3
                     }
-                });
-            }
+                }
+            });
+            $('.owl-carousel').on('mousewheel', '.owl-stage', function (e) {
+                if (e.deltaY<0) {
+                    $('.owl-carousel').trigger('next.owl');
+                    console.log('next')
+                } else {
+                    $('.owl-carousel').trigger('prev.owl');
+                    console.log('prev')
+                }
+                e.preventDefault();
+            });
         }
     });
 
@@ -71,24 +96,6 @@
         // more configuration
     });
 
-    $('.owl-carousel').owlCarousel({
-        items:4,
-        loop:false,
-        margin:20,
-        nav: true,
-        dots: false,
-        navText: ["",""],
-        responsive : {
-            0 : {
-                items:2,
-            },
-            1350 : {
-                items:3,
-            },
-            1900 : {
-                items:4,
-            }
-        }
-    });
+
 
 })();
