@@ -88,13 +88,15 @@
       background-size: 90%
     .home
       .home-layer-info
-        top: 55%
+        top: 15vh
         .home-layer-info-left
-          width: 240px
+          width: 210px
           img
             width: 100%
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5)
+  .home
+    height: calc(100vh - 80px)
   body
     .mobile-mnu.active ul li
       padding: 20px 0
@@ -112,11 +114,14 @@
 
 /* Landscape */
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5)
-
+  .home
+    height: calc(100vh - 100px)
   .video-bg_layer
     background-size: 100vw
     background-position-x: 0
-
+@media only screen and (min-device-width: 1024px) and (max-device-width: 768px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5)
+  .home
+    height: calc(100vh - 80px)
 @media only screen and (max-width : 1024px)
   .home-layer-info
     top: 60%
@@ -144,13 +149,14 @@
 // ≥992px
 +media-breakpoint-down(md)
   .home
+    height: calc(100vh - 80px)
     padding-bottom: 10px
   .video-bg_layer
     background-size: 170%
     background-position: center bottom
   .home-layer-info
     height: 150px
-    top: 20%
+    top: 10vh
     font-size: 14px
   .home-layer-info-right
     margin-bottom: -30px

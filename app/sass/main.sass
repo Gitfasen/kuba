@@ -17,6 +17,18 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 	color: $text
+	background-color: #4D2D1E
+	&::before
+		content: ""
+		position: fixed
+		top: 0
+		height: calc(100vh + 30px)
+		left: 0
+		right: 0
+		z-index: -11
+		background: url(../img/back-page.jpg) no-repeat top
+		background-size: cover
+		background-attachment: fixed
 	&::-webkit-scrollbar-track
 		opacity: 0
 	&::-webkit-scrollbar
@@ -49,7 +61,8 @@ a
 		text-decoration: none
 b, strong
 	font-weight: bold
-
+.overflow
+	overflow: hidden
 .loader
 	background: none repeat scroll 0 0 #FFFFFF
 	bottom: 0
@@ -75,12 +88,13 @@ b, strong
 .copyright
 	position: fixed
 	bottom: 3%
-	left: 3%
+	left: 20px
 	opacity: 0.3
 	padding-left: 15px
 .copyright.active
 	z-index: 10
 	opacity: 1
+	padding-left: 20px
 .video-bg
 	position: fixed
 	top: 50%
@@ -89,7 +103,7 @@ b, strong
 	min-height: 100%
 	width: auto
 	height: auto
-	z-index: -100
+	z-index: -10
 	transform: translateX(-50%) translateY(-50%)!important
 	background: url('../img/back.jpg') no-repeat
 	background-size: cover
@@ -101,15 +115,6 @@ b, strong
 	display: flex
 	align-items: center
 	overflow: hidden
-.page-content-bg
-	height: 100vh
-	width: 100vw
-	top: 0
-	left: 0
-	position: fixed
-	z-index: -1
-	background: url(../img/back-page.jpg) no-repeat top fixed
-	background-size: cover	
 
 .owl-carousel
 	.owl-stage-outer

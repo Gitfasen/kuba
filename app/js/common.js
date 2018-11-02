@@ -1,7 +1,9 @@
-(function () {
-
+$( document ).ready(function() {
     $(".loader_inner").delay(100).fadeOut("slow");
     $(".loader").delay(400).fadeOut("slow");
+});
+
+(function () {
 
     $('.hamburger').on('click', function () {
         $('.hamburger').toggleClass('is-active');
@@ -9,6 +11,7 @@
         $('.copyright').toggleClass('active');
         $('.logo').toggleClass('hide');
         $('.no-hide').toggleClass('hide');
+        $('body').toggleClass('overflow');
     });
 
     // Video Popup
